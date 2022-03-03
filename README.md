@@ -1,15 +1,11 @@
 # AWS Automatic Security Bulletin Alerts
 
 This CDK project deploys an AWS Lambda Function which is scheduled for every full hour.
-It checks the RSS feed of [this pag](https://aws.amazon.com/security/security-bulletins) for new AWS Security Bulletins and publishes new alerts to an [Amazon SNS](https://aws.amazon.com/sns/) topic.
+It checks the RSS feed of [this page](https://aws.amazon.com/security/security-bulletins) for new AWS Security Bulletins and publishes new alerts to an [Amazon SNS](https://aws.amazon.com/sns/) topic.
 Various types of [subscribers](https://docs.aws.amazon.com/sns/latest/dg/sns-event-destinations.html) can be added to this topic, for example E-Mail or SMS recipients.
 
 ## Architecture
 ![architecture diagram](img/diagram.png "Architecture Diagram")
-
-## Prerequisites
-A verified identity in SES is needed.
-See https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html for detailed instructions
 
 ## Configuration
 In `lib/cve-alert-stack` you can
